@@ -1,0 +1,167 @@
+#contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-wrapper {
+  width: 100%;
+  padding: 50px;
+}
+
+.contact-wrapper h2 {
+  width: 100%;
+  color: $primary-color;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+.contact-wrapper .contact-row {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.contact-wrapper .contact-row .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
+
+.contact-wrapper .contact-row .inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: rgb(177, 177, 177);
+}
+.contact-wrapper .contact-row .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: rgb(177, 177, 177);
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.contact-wrapper .contact-row .inputBox .notValid {
+  height: 100%;
+  border-radius: 25px;
+  background-color: rgba(255, 0, 0, 0.719);
+  box-shadow: inset 5px 5px 5px rgba(121, 0, 0, 0.8),
+    inset -5px -5px 5px rgba(255, 163, 163, 0.541);
+}
+
+.contact-wrapper .contact-row .selected {
+  color: $primary-color;
+}
+.contact-wrapper .contact-row .selected .line {
+  background: $primary-color;
+}
+
+.contact-wrapper .contact-row .inputBox input,
+.contact-wrapper .contact-row .inputBox.message textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 10px;
+  z-index: 1;
+  color: black;
+}
+
+.contact-wrapper .contact-row .inputBox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 1rem;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.contact-wrapper .contact-row .inputBox input:focus + .text,
+.contact-wrapper .contact-row .inputBox input:valid + .text {
+  top: -35px;
+  left: -5px;
+  //   color: $primary-color;
+}
+
+.contact-wrapper .contact-row .inputBox input:focus ~ .line,
+.contact-wrapper .contact-row .inputBox input:valid ~ .line {
+  height: 100%;
+  border-radius: 25px;
+  background-color: $primary-color;
+  box-shadow: inset 5px 5px 5px rgba(0, 56, 121, 0.8),
+    inset -5px -5px 5px rgba(163, 221, 255, 0.8);
+  background: $primary-color;
+}
+
+.contact-wrapper .contact-row .inputBox.message {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.contact-wrapper .contact-row .inputBox.message textarea {
+  height: 100%;
+  resize: none;
+}
+
+.contact-wrapper .contact-row .inputBox textarea:focus + .text,
+.contact-wrapper .contact-row .inputBox textarea:valid + .text {
+  top: -35px;
+  left: -5px;
+}
+
+.contact-wrapper .contact-row .inputBox textarea:focus ~ .line,
+.contact-wrapper .contact-row .inputBox textarea:valid ~ .line {
+  height: 100%;
+  border-radius: 15px;
+  background-color: $primary-color;
+  box-shadow: inset 5px 5px 5px rgba(0, 56, 121, 0.8),
+    inset -5px -5px 5px rgba(163, 221, 255, 0.8);
+}
+
+.btn {
+  padding: 40px 10px;
+}
+
+.btn button {
+  all: unset;
+  cursor: pointer;
+  padding: 8px 20px;
+  font-size: 1.2rem;
+  border-radius: 40px;
+  color: $primary-color;
+  box-shadow: -2px -2px 8px rgb(31, 31, 37),
+    -2px -2px 12px rgba(31, 31, 37, 0.5),
+    inset 2px 2px 4px rgba(31, 31, 37, 0.1),
+    2px 2px 4px rgba(255, 255, 255, 0.15);
+}
+
+.btn button:hover {
+  padding: 10px 25px;
+  box-shadow: inset -2px -2px 8px rgba(31, 31, 37, 1),
+    inset -2px -2px 12px rgba(31, 31, 37, 0.5),
+    inset 2px 2px 4px rgba(31, 31, 37, 0.1),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.15);
+}
+
+.btn button:hover span {
+  display: inline-block;
+  transform: scale(0.98);
+}

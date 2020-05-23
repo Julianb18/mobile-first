@@ -1,0 +1,28 @@
+@import "variables";
+@import "mobile-nav";
+@import "home";
+@import "skills";
+@import "contact";
+@import "animations";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: $secondary-color;
+  color: rgb(240, 247, 255);
+  font-family: sans-serif;
+}
+
+#home-page,
+#about-page,
+#projects-page,
+#contact-page {
+  height: 100vh;
+  background-color: $secondary-color;
+}
+#skills-page {
+  background-color: $secondary-color;
+}
