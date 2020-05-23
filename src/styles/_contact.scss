@@ -2,11 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .contact-wrapper {
   width: 100%;
-  padding: 50px;
+  // min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0em 3em;
+  // padding: 0 5em;
 }
 
 .contact-wrapper h2 {
@@ -21,15 +27,17 @@
 .contact-wrapper .contact-row {
   position: relative;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  overflow: hidden;
+  // border: 1px solid red;
 }
 
 .contact-wrapper .contact-row .col {
   position: relative;
   width: 100%;
-  padding: 0 10px;
-  margin: 30px 0 10px;
+  margin: 30px 0 10px 0;
   transition: 0.5s;
 }
 
@@ -50,6 +58,26 @@
   border-radius: 2px;
   pointer-events: none;
 }
+// .contact-wrapper .contact-row .inputBox .this {
+//   height: 100%;
+//   border-radius: 25px;
+//   background-color: rgba(30, 30, 36, 0.801);
+//   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
+//     inset -1px -1px 5px rgba(255, 255, 255, 0.596);
+// }
+
+.contact-wrapper .contact-row .inputBox .line::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border-bottom: 3px solid $primary-color;
+  left: 0;
+  bottom: 0px;
+  transform: translateX(-150%);
+  transition: transform 0.3s ease;
+}
 .contact-wrapper .contact-row .inputBox .notValid {
   height: 100%;
   border-radius: 25px;
@@ -58,12 +86,12 @@
     inset -5px -5px 5px rgba(255, 163, 163, 0.541);
 }
 
-.contact-wrapper .contact-row .selected {
-  color: $primary-color;
-}
-.contact-wrapper .contact-row .selected .line {
-  background: $primary-color;
-}
+// .contact-wrapper .contact-row .selected {
+//   color: $primary-color;
+// }
+// .contact-wrapper .contact-row .selected .line {
+//   background: $primary-color;
+// }
 
 .contact-wrapper .contact-row .inputBox input,
 .contact-wrapper .contact-row .inputBox.message textarea {
@@ -77,7 +105,7 @@
   font-size: 1rem;
   padding: 0 10px;
   z-index: 1;
-  color: black;
+  color: white;
 }
 
 .contact-wrapper .contact-row .inputBox .text {
@@ -96,17 +124,22 @@
 .contact-wrapper .contact-row .inputBox input:valid + .text {
   top: -35px;
   left: -5px;
-  //   color: $primary-color;
+  color: $primary-color;
 }
 
 .contact-wrapper .contact-row .inputBox input:focus ~ .line,
 .contact-wrapper .contact-row .inputBox input:valid ~ .line {
   height: 100%;
   border-radius: 25px;
-  background-color: $primary-color;
-  box-shadow: inset 5px 5px 5px rgba(0, 56, 121, 0.8),
-    inset -5px -5px 5px rgba(163, 221, 255, 0.8);
-  background: $primary-color;
+  background-color: rgba(30, 30, 36, 0.801);
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.596);
+}
+
+.contact-wrapper .contact-row .inputBox input:focus ~ .line::before,
+.contact-wrapper .contact-row .inputBox input:valid ~ .line::before {
+  transform: translateX(0%);
+  border-radius: 25px;
 }
 
 .contact-wrapper .contact-row .inputBox.message {
@@ -114,6 +147,7 @@
   width: 100%;
   height: 100px;
   padding: 10px 0;
+  margin-bottom: 30px;
 }
 
 .contact-wrapper .contact-row .inputBox.message textarea {
@@ -137,7 +171,8 @@
 }
 
 .btn {
-  padding: 40px 10px;
+  align-self: flex-start;
+  padding: 0 0 30px 10px;
 }
 
 .btn button {

@@ -8,15 +8,15 @@ mobileNav();
 
 // Contact Form onclick highlight
 
-$(".contact-wrapper .inputBox").click(function () {
-  let contactLabel = $(".contact-wrapper .inputBox");
+// $(".contact-wrapper .inputBox").click(function () {
+//   let contactLabel = $(".contact-wrapper .inputBox");
 
-  for (let i = 0; i < contactLabel.length; i++) {
-    contactLabel[i].classList.remove("selected");
-  }
+//   for (let i = 0; i < contactLabel.length; i++) {
+//     contactLabel[i].classList.remove("selected");
+//   }
 
-  this.classList.add("selected");
-});
+//   this.classList.add("selected");
+// });
 
 // Contact form validation
 
