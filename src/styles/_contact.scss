@@ -7,7 +7,7 @@
 
 .contact-wrapper {
   width: 100%;
-  // min-width: 400px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,18 +27,18 @@
 .contact-wrapper .contact-row {
   position: relative;
   width: 100%;
-
   // display: grid;
   // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   overflow: hidden;
   // border: 1px solid red;
 }
 
-.contact-wrapper .contact-row .col {
+.contact-wrapper .contact-row .field-container {
   position: relative;
   width: 100%;
-  margin: 30px 0 10px 0;
+  padding: 30px 0 10px 0;
   transition: 0.5s;
+  // border: 1px solid red;
 }
 
 .contact-wrapper .contact-row .inputBox {
@@ -66,25 +66,39 @@
 //     inset -1px -1px 5px rgba(255, 255, 255, 0.596);
 // }
 
-.contact-wrapper .contact-row .inputBox .line::before {
-  content: "";
+// .contact-wrapper .contact-row .inputBox .line::before {
+//   content: "";
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 0;
+//   border-bottom: 3px solid $primary-color;
+//   left: 0;
+//   bottom: 0px;
+//   transform: translateX(-150%);
+//   transition: transform 0.3s ease;
+// }
+
+.contact-wrapper .contact-row .inputBox .line-color {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 0;
+  border-radius: 25px;
   border-bottom: 3px solid $primary-color;
   left: 0;
   bottom: 0px;
   transform: translateX(-150%);
   transition: transform 0.3s ease;
 }
-.contact-wrapper .contact-row .inputBox .notValid {
-  height: 100%;
-  border-radius: 25px;
-  background-color: rgba(255, 0, 0, 0.719);
-  box-shadow: inset 5px 5px 5px rgba(121, 0, 0, 0.8),
-    inset -5px -5px 5px rgba(255, 163, 163, 0.541);
-}
+
+// .contact-wrapper .contact-row .inputBox .notValid {
+//   height: 100%;
+//   border-radius: 25px;
+//   border-bottom: 3px solid red;
+//   background-color: rgb(30, 30, 36);
+//   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
+//     inset -1px 0px 5px rgba(255, 255, 255, 0.596);
+// }
 
 // .contact-wrapper .contact-row .selected {
 //   color: $primary-color;
@@ -131,15 +145,20 @@
 .contact-wrapper .contact-row .inputBox input:valid ~ .line {
   height: 100%;
   border-radius: 25px;
-  background-color: rgba(30, 30, 36, 0.801);
+  background-color: rgb(30, 30, 36);
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
     inset -1px -1px 5px rgba(255, 255, 255, 0.596);
 }
 
-.contact-wrapper .contact-row .inputBox input:focus ~ .line::before,
-.contact-wrapper .contact-row .inputBox input:valid ~ .line::before {
+// .contact-wrapper .contact-row .inputBox input:focus ~ .line::before,
+// .contact-wrapper .contact-row .inputBox input:valid ~ .line::before {
+//   transform: translateX(0%);
+//   border-radius: 25px;
+// }
+
+.contact-wrapper .contact-row .inputBox input:focus ~ .line .line-color,
+.contact-wrapper .contact-row .inputBox input:valid ~ .line .line-color {
   transform: translateX(0%);
-  border-radius: 25px;
 }
 
 .contact-wrapper .contact-row .inputBox.message {
@@ -164,10 +183,21 @@
 .contact-wrapper .contact-row .inputBox textarea:focus ~ .line,
 .contact-wrapper .contact-row .inputBox textarea:valid ~ .line {
   height: 100%;
-  border-radius: 15px;
-  background-color: $primary-color;
-  box-shadow: inset 5px 5px 5px rgba(0, 56, 121, 0.8),
-    inset -5px -5px 5px rgba(163, 221, 255, 0.8);
+  border-radius: 25px;
+  background-color: rgb(30, 30, 36);
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.596);
+}
+
+// .contact-wrapper .contact-row .inputBox textarea:focus ~ .line::before,
+// .contact-wrapper .contact-row .inputBox textarea:valid ~ .line::before {
+//   transform: translateX(0%);
+//   border-radius: 25px;
+// }
+
+.contact-wrapper .contact-row .inputBox textarea:focus ~ .line .line-color,
+.contact-wrapper .contact-row .inputBox textarea:valid ~ .line .line-color {
+  transform: translateX(0%);
 }
 
 .btn {
