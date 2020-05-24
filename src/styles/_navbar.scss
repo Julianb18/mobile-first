@@ -1,0 +1,115 @@
+.nav-bar ul {
+  list-style: none;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.nav-bar .logo {
+  display: none;
+}
+
+.nav-bar .profile-links {
+  display: none;
+}
+
+.logo img {
+  width: 100%;
+}
+nav a svg {
+  height: 26px;
+  width: 26px;
+  fill: rgb(132, 132, 133);
+}
+
+nav .active svg {
+  fill: $primary-color;
+}
+
+.nav-bar nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 3.8em;
+  position: fixed;
+  top: 3.8em;
+  background-color: rgb(30, 30, 36);
+  z-index: 100;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.4s ease-in;
+}
+
+.nav-bar nav a {
+  display: block;
+  padding: 10px 0;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-bar nav a::after {
+  content: "";
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  color: $primary-color;
+}
+
+nav a svg {
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+nav a:hover svg {
+  opacity: 0;
+}
+
+.nav-bar nav .icon-home::after {
+  content: "HOME";
+}
+// .nav-bar nav .icon-about::after {
+//   content: "ABOUT";
+// }
+
+.nav-bar nav .icon-skills::after {
+  content: "SKILLS";
+}
+.nav-bar nav .icon-work::after {
+  content: "MY WORK";
+}
+.nav-bar nav .icon-contact::after {
+  content: "CONTACT";
+}
+.nav-bar nav a:hover::after {
+  opacity: 1;
+}
+
+.nav-bar ul li {
+  width: 100%;
+}
+.nav-bar ul li .fm {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-bar ul .fm svg {
+  height: 20px;
+  width: 20px;
+  fill: rgb(132, 132, 133);
+}
+
+.nav-bar ul .fm:hover svg {
+  fill: $primary-color;
+}
