@@ -106,9 +106,11 @@
       border: none;
       outline: none;
       font-size: 1rem;
-      padding: 0 10px;
       z-index: 1;
       color: white;
+      top: 0;
+      border-radius: 25px;
+      padding: 10px 16px;
     }
 
     .inputBox .text {
@@ -159,7 +161,7 @@
     }
 
     .inputBox.message-field textarea {
-      height: 100%;
+      height: 95%;
       resize: none;
     }
 
@@ -224,8 +226,22 @@
   font-size: 0.8em;
   bottom: -1.4em;
   right: 1em;
-  color: rgb(255, 0, 0);
+  color: rgb(255, 58, 50);
   letter-spacing: 1px;
   display: none;
   // text-transform: uppercase;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }

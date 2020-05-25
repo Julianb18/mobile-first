@@ -105,8 +105,11 @@ $("form").submit((e) => {
 
   if (!nameReg.test(nameInput)) {
     e.preventDefault();
-    $(".name-field .line-color").css("border-bottom", "3px solid red");
-    $(".name-field .text").css("color", "red");
+    $(".name-field .line-color").css(
+      "border-bottom",
+      "3px solid rgb(255, 58, 50)"
+    );
+    $(".name-field .text").css("color", "rgb(255, 58, 50)");
     $(".name-field .error-message").css("display", "block");
   } else {
     $(".name-field .line-color").css(
@@ -119,8 +122,11 @@ $("form").submit((e) => {
 
   if (!emailReg.test(emailInput)) {
     e.preventDefault();
-    $(".email-field .line-color").css("border-bottom", "3px solid red");
-    $(".email-field .text").css("color", "red");
+    $(".email-field .line-color").css(
+      "border-bottom",
+      "3px solid rgb(255, 58, 50)"
+    );
+    $(".email-field .text").css("color", "rgb(255, 58, 50)");
     $(".email-field .error-message").css("display", "block");
   } else {
     $(".email-field .line-color").css(
@@ -133,8 +139,11 @@ $("form").submit((e) => {
 
   if (!subjectReg.test(subjectInput)) {
     e.preventDefault();
-    $(".subject-field .line-color").css("border-bottom", "3px solid red");
-    $(".subject-field .text").css("color", "red");
+    $(".subject-field .line-color").css(
+      "border-bottom",
+      "3px solid rgb(255, 58, 50)"
+    );
+    $(".subject-field .text").css("color", "rgb(255, 58, 50)");
     $(".subject-field .error-message").css("display", "block");
   } else {
     $(".subject-field .line-color").css(
@@ -147,8 +156,11 @@ $("form").submit((e) => {
 
   if (!textReg.test(textArea)) {
     e.preventDefault();
-    $(".message-field .line-color").css("border-bottom", "3px solid red");
-    $(".message-field .text").css("color", "red");
+    $(".message-field .line-color").css(
+      "border-bottom",
+      "3px solid rgb(255, 58, 50)"
+    );
+    $(".message-field .text").css("color", "rgb(255, 58, 50)");
   } else {
     $(".message-field .line-color").css(
       "border-bottom",
