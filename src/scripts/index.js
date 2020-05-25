@@ -64,6 +64,20 @@ $(document).ready(function () {
   });
 });
 
+// Smooth scrolling
+
+$('a[href*="#"]').on("click", function (e) {
+  e.preventDefault();
+
+  $("html, body").animate(
+    {
+      scrollTop: $($(this).attr("href")).offset().top,
+    },
+    300,
+    "linear"
+  );
+});
+
 // Contact Form onclick highlight
 
 // $(".contact-wrapper .inputBox").click(function () {
@@ -134,10 +148,12 @@ $("form").submit((e) => {
   if (!textReg.test(textArea)) {
     e.preventDefault();
     $(".message-field .line-color").css("border-bottom", "3px solid red");
+    $(".message-field .text").css("color", "red");
   } else {
     $(".message-field .line-color").css(
       "border-bottom",
       "3px solid rgb(34, 192, 255)"
     );
+    $(".message-field .text").css("color", "rgb(34, 192, 255)");
   }
 });
