@@ -101,7 +101,7 @@ $("form").submit((e) => {
   const nameReg = /^[a-z A-z]{3,15}$/;
   const emailReg = /^([a-z A-Z 0-9\.-]+)@([a-z A-Z 0-9-]+)\.([a-z]{2,6})(.[a-z]{2,6})?$/;
   const subjectReg = /^[a-z A-Z 0-9-"\.,()\[\]\?!]{3,30}$/;
-  const textReg = /^[a-z A-Z 0-9-"\.,()\[\]\?!]{3,150}$/;
+  const textReg = /^[a-z A-Z 0-9-"\.,()\[\]\?!\n\r]{3,150}$/;
 
   if (!nameReg.test(nameInput)) {
     e.preventDefault();

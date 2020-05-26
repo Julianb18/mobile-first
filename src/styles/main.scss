@@ -17,13 +17,14 @@ body {
   font-family: sans-serif;
 }
 
+.wrapper {
+  padding: 3.8rem 0.5rem;
+}
+
 #home-page,
-#about-page,
+#skills-page,
 #projects-page,
 #contact-page {
-  height: 100vh;
-  background-color: $secondary-color;
-}
-#skills-page {
+  min-height: 100vh;
   background-color: $secondary-color;
 }
