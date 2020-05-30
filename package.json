@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "portfolio",
   "version": "0.1.0",
-  "description": "",
+  "description": "personal portfolio",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
@@ -14,7 +14,7 @@
     "last 2 versions"
   ],
   "keywords": [],
-  "author": "",
+  "author": "Julian Braun",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.3.4",

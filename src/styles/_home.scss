@@ -1,3 +1,85 @@
 #home-page {
-  // padding-top: 3.8rem;
+  padding-top: 3.8rem;
+  position: relative;
+}
+
+.typing-animate {
+  position: absolute;
+  // top: 80px;
+  // left: 50px;
+}
+
+#home-page .myName {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: myName 2s steps(14, end) forwards, firstBlink 1s 3;
+  letter-spacing: 2px;
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px;
+}
+#home-page .myName span {
+  color: $primary-color;
+  text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px rgb(68, 97, 109),
+    1px 3px 2px rgb(68, 97, 109);
+}
+
+#home-page .frontend span {
+  color: $primary-color;
+  text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px;
+}
+
+#home-page .frontend {
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: frontend 3s steps(25, end) forwards 2.7s, blink 1s infinite;
+  opacity: 0;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px grey, 1px 2px 2px;
+}
+
+@keyframes myName {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes frontend {
+  0% {
+    width: 0%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes firstBlink {
+  0%,
+  100% {
+    border-right: 5px solid transparent;
+  }
+
+  50% {
+    border-right: 5px solid white;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-right: 2px solid transparent;
+  }
+
+  50% {
+    border-right: 2px solid white;
+  }
 }
