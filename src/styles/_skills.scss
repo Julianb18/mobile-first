@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 3.8rem;
 
   .skills-text {
     h2 {
@@ -16,35 +15,70 @@
       text-transform: uppercase;
       position: relative;
       display: inline-block;
-
-      &:before {
-        content: "";
-        position: absolute;
-        height: 0.1em;
-        width: 90%;
-        background-color: grey;
-        bottom: -0.4em;
-        //   left: 0;
-        border-radius: 10px;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        height: 0.1em;
-        width: 40%;
-        background-color: grey;
-        bottom: -0.7em;
-        left: 0;
-        //   left: 0;
-        border-radius: 10px;
-      }
-
-      &:hover:before {
-        background-color: red;
-      }
+      padding-top: 3.8rem;
     }
+
     p {
       padding-top: 3.2rem;
+    }
+
+    .skills-header {
+      position: relative;
+      // border: 1px solid red;
+      display: inline-block;
+
+      &:hover .first-header-line:before {
+        transform: translateX(0%);
+      }
+      &:hover .second-header-line:before {
+        transform: translateX(0%);
+        transition-delay: 0.2s;
+      }
+
+      .first-header-line {
+        position: absolute;
+        height: 0.2em;
+        width: 100%;
+        background-color: rgb(133, 133, 133);
+        bottom: 0;
+        left: 0;
+        bottom: -0.4em;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: $primary-color;
+          transform: translateX(-100%);
+          transition: all ease-in-out 0.3s;
+          border-radius: 10px;
+        }
+      }
+      .second-header-line {
+        position: absolute;
+        height: 0.2em;
+        width: 50%;
+        background-color: rgb(133, 133, 133);
+        bottom: 0;
+        left: 0;
+        bottom: -0.9em;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: $primary-color;
+          transform: translateX(-100%);
+          transition: all ease-in-out 0.3s;
+          border-radius: 10px;
+        }
+      }
     }
   }
 
