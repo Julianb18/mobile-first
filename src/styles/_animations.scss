@@ -1,3 +1,5 @@
+// Mobile nav burger Icon
+
 @keyframes openTop {
   0% {
     transform: translateY(-0.4rem) rotate(0deg);
@@ -60,5 +62,19 @@
   }
   100% {
     transform: translateY(0rem) rotate(90deg);
+  }
+}
+
+// Mobile digital clock
+
+@keyframes frontFlipDown {
+  to {
+    transform: rotateX(0.5turn);
+  }
+}
+
+@keyframes backFlipDown {
+  to {
+    transform: rotateX(0);
   }
 }

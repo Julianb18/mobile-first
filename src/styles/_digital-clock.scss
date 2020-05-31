@@ -1,0 +1,84 @@
+.digital-clock {
+  display: flex;
+  //   align-self: center;
+  margin-top: 1.2em;
+  position: absolute;
+  top: 4rem;
+
+  .flip {
+    position: relative;
+    width: 1.6em;
+    height: 3.4em;
+    margin: 0.5em;
+    line-height: 3.5em;
+    text-align: center;
+    // border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.657),
+      -1px -1px 3px rgba(255, 255, 255, 0.397);
+
+    .digital {
+      font-size: 2em;
+      font-weight: lighter;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: attr(data-number);
+        left: 0;
+        right: 0;
+        color: white;
+        background: rgb(28, 28, 32);
+        overflow: hidden;
+        // perspective: 160px;
+      }
+
+      &::before {
+        top: 0;
+        bottom: 50%;
+        border-bottom: 1px solid rgb(100, 100, 100);
+        border-radius: 5px 5px 0 0;
+      }
+
+      &::after {
+        top: 50%;
+        bottom: 0;
+        line-height: 0;
+        border-radius: 0 0 5px 5px;
+      }
+
+      &.front::after,
+      &.back::before {
+        z-index: 1;
+      }
+
+      &.back::after {
+        transform-origin: top center;
+        transform: rotateX(0.5turn);
+        z-index: 2;
+      }
+
+      &.front::before {
+        z-index: 3;
+      }
+    }
+
+    &.running .front::before {
+      transform-origin: center bottom;
+      animation: frontFlipDown 0.6s ease-in-out;
+      box-shadow: 0 -2px 6px rgba(255, 255, 255, 0.3);
+      backface-visibility: hidden;
+    }
+
+    &.running .back::after {
+      animation: backFlipDown 0.6s ease-in-out;
+    }
+  }
+
+  .colon {
+    font-size: 2.5em;
+    font-style: normal;
+    line-height: 1.6em;
+  }
+}

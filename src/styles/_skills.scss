@@ -29,10 +29,10 @@
       display: inline-block;
       margin-bottom: 2.2rem;
 
-      &:hover .first-header-line:before {
+      &:hover .first-header-line::before {
         transform: translateX(0%);
       }
-      &:hover .second-header-line:before {
+      &:hover .second-header-line::before {
         transform: translateX(0%);
         transition-delay: 0.2s;
       }
@@ -48,7 +48,7 @@
         border-radius: 10px;
         overflow: hidden;
 
-        &:before {
+        &::before {
           content: "";
           position: absolute;
           height: 100%;
@@ -70,7 +70,7 @@
         border-radius: 10px;
         overflow: hidden;
 
-        &:before {
+        &::before {
           content: "";
           position: absolute;
           height: 100%;
