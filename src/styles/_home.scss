@@ -1,44 +1,63 @@
 #home-page {
-  padding-top: 3.8rem;
+  padding-top: 3.6rem;
   position: relative;
-}
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
 
-.typing-animate {
-  position: absolute;
-  // top: 80px;
-  // left: 50px;
-}
+  .typing-animate {
+    display: inline-block;
+    // position: absolute;
+    // top: 80px;
+    // left: 50px;
+  }
 
-#home-page .myName {
-  white-space: nowrap;
-  overflow: hidden;
-  animation: myName 2s steps(14, end) forwards, firstBlink 1s 3;
-  letter-spacing: 2px;
-  font-size: 2em;
-  font-weight: 700;
-  color: white;
-  text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px;
-}
-#home-page .myName span {
-  color: $primary-color;
-  text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px rgb(68, 97, 109),
-    1px 3px 2px rgb(68, 97, 109);
-}
+  .about-text {
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
+      inset -1px -1px 5px rgba(255, 255, 255, 0.397);
+    padding: 0.7em;
+    border-radius: 15px;
+    // margin-top: 3em;
+    position: absolute;
+    bottom: 1.9em;
 
-#home-page .frontend span {
-  color: $primary-color;
-  text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px;
-}
+    p {
+      letter-spacing: 1px;
+      padding-bottom: 0.5em;
+    }
+  }
 
-#home-page .frontend {
-  color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: frontend 3s steps(25, end) forwards 2.7s, blink 1s infinite;
-  opacity: 0;
-  letter-spacing: 2px;
-  font-size: 1rem;
-  text-shadow: 1px 1px 1px grey, 1px 2px 2px;
+  .myName {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: myName 2s steps(14, end) forwards, firstBlink 1s 3;
+    letter-spacing: 2px;
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px;
+  }
+  .myName span {
+    color: $primary-color;
+    text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px rgb(68, 97, 109),
+      1px 3px 2px rgb(68, 97, 109);
+  }
+
+  .frontend span {
+    color: $primary-color;
+    text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px;
+  }
+
+  .frontend {
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: frontend 3s steps(25, end) forwards 2.7s, blink 1s infinite;
+    opacity: 0;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    text-shadow: 1px 1px 1px grey, 1px 2px 2px;
+  }
 }
 
 @keyframes myName {
