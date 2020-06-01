@@ -1,18 +1,31 @@
 #home-page {
   // padding-top: 3.6rem;
   position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5em;
+  justify-content: space-between;
 
+  .effect {
+    position: absolute;
+    top: 5em;
+    letter-spacing: 2px;
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px;
+  }
   .about-text {
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
       inset -1px -1px 5px rgba(255, 255, 255, 0.397);
-    padding: 0.7em;
+    padding: 1.5em 1em;
     border-radius: 10px;
     // margin-top: 3em;
-    position: absolute;
-    bottom: 1.9em;
+    // position: absolute;
+    // top: 22em;
+    // left: 0;
+    line-height: 1.4em;
+    margin: 10em 0;
 
     p {
       letter-spacing: 1px;
@@ -24,7 +37,7 @@
     display: inline-block;
     // border: 1px solid red;
     position: absolute;
-    top: 13em;
+    top: 11em;
     // top: 80px;
     // left: 50px;
 
@@ -37,27 +50,30 @@
       font-weight: 700;
       color: white;
       text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px;
-    }
-    .myName span {
-      color: $primary-color;
-      text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px rgb(68, 97, 109),
-        1px 3px 2px rgb(68, 97, 109);
-    }
+      margin-bottom: 0.4em;
 
-    .frontend span {
-      color: $primary-color;
-      text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px;
+      span {
+        color: $primary-color;
+        text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px rgb(68, 97, 109),
+          1px 3px 2px rgb(68, 97, 109);
+      }
     }
 
     .frontend {
       color: white;
       white-space: nowrap;
       overflow: hidden;
-      animation: frontend 3s steps(25, end) forwards 2.7s, blink 1s infinite;
+      animation: frontend 3s steps(25, end) forwards 2.7s, blink 1s 9;
       opacity: 0;
       letter-spacing: 2px;
       font-size: 1rem;
       text-shadow: 1px 1px 1px grey, 1px 2px 2px;
+      margin-left: 0.2em;
+
+      span {
+        color: $primary-color;
+        text-shadow: 1px 1px 1px rgb(68, 97, 109), 1px 2px 2px;
+      }
     }
   }
 }

@@ -5,6 +5,7 @@
   width: 100%;
 
   .skills-text {
+    padding: 0 0.5em;
     h2 {
       color: $primary-color;
       letter-spacing: 1px;
@@ -20,7 +21,7 @@
 
     p {
       letter-spacing: 1px;
-      padding-bottom: 0.5em;
+      line-height: 1.4em;
     }
 
     .skills-header {
