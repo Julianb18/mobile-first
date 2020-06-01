@@ -2,6 +2,7 @@
 @import "mobile-nav";
 @import "navbar";
 @import "digital-clock";
+@import "analog-clock";
 @import "home";
 @import "skills";
 @import "projects";
@@ -19,8 +20,10 @@ body {
   font-family: sans-serif;
 }
 
-.wrapper {
-  padding: 0.8rem 0.5rem;
+.clock {
+  transition: all ease-in-out 0.3s;
+  transform: translateX(120%);
+  opacity: 0;
 }
 
 #home-page,
@@ -29,4 +32,11 @@ body {
 #contact-page {
   min-height: 100vh;
   background-color: $secondary-color;
+}
+
+@media all and (min-width: 992px) {
+  .clock {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }

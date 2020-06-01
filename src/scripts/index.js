@@ -1,8 +1,11 @@
 import "../styles/main.scss";
 import "regenerator-runtime/runtime";
-import { mobileNav, navClick } from "./mobile-nav";
+import { mobileNav } from "./mobile-nav";
+import { clock } from "./analog-clock";
 
 const $ = require("jquery");
+
+clock();
 
 mobileNav();
 

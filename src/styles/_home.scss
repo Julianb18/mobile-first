@@ -3,29 +3,86 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 0.5em;
+  padding: 0 1em;
   justify-content: space-between;
 
-  .effect {
-    position: absolute;
-    top: 5em;
-    letter-spacing: 2px;
-    font-size: 2em;
-    font-weight: 700;
-    color: white;
-    text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px;
-  }
   .about-text {
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
       inset -1px -1px 5px rgba(255, 255, 255, 0.397);
     padding: 1.5em 1em;
     border-radius: 10px;
-    // margin-top: 3em;
-    // position: absolute;
-    // top: 22em;
-    // left: 0;
     line-height: 1.4em;
-    margin: 10em 0;
+    margin: 25em 0 0 0;
+    position: relative;
+
+    .about-header {
+      display: none;
+      position: absolute;
+      top: -4em;
+
+      &:hover .first-header-line::before {
+        transform: translateX(0%);
+      }
+      &:hover .second-header-line::before {
+        transform: translateX(0%);
+        transition-delay: 0.2s;
+      }
+
+      h2 {
+        font-size: 1.8em;
+        color: $primary-color;
+        letter-spacing: 1px;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.657),
+          -1px -1px 5px rgba(255, 255, 255, 0.397);
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .first-header-line {
+        position: absolute;
+        height: 0.2em;
+        width: 100%;
+        background-color: rgb(133, 133, 133);
+        bottom: 0;
+        left: 0;
+        bottom: -0.4em;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: $primary-color;
+          transform: translateX(-100%);
+          transition: all ease-in-out 0.3s;
+          border-radius: 10px;
+        }
+      }
+      .second-header-line {
+        position: absolute;
+        height: 0.2em;
+        width: 50%;
+        background-color: rgb(133, 133, 133);
+        bottom: 0;
+        left: 0;
+        bottom: -0.9em;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: $primary-color;
+          transform: translateX(-100%);
+          transition: all ease-in-out 0.3s;
+          border-radius: 10px;
+        }
+      }
+    }
 
     p {
       letter-spacing: 1px;
@@ -118,5 +175,52 @@
 
   50% {
     border-right: 2px solid white;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .digital-clock {
+    transform: translateX(120%);
+    opacity: 0;
+    display: none;
+  }
+
+  #home-page {
+    .typing-animate {
+      .myName {
+        font-size: 5rem;
+        text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px grey,
+          1px 4px 2px grey, 1px 5px 2px grey;
+        margin-bottom: 0.2em;
+
+        span {
+          text-shadow: 1px 1px 1px rgb(68, 97, 109),
+            1px 2px 2px rgb(68, 97, 109), 1px 3px 2px rgb(68, 97, 109),
+            1px 4px 2px rgb(68, 97, 109), 1px 5px 2px rgb(68, 97, 109);
+        }
+      }
+
+      .frontend {
+        font-size: 2.5rem;
+        text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px grey;
+
+        span {
+          text-shadow: 1px 1px 1px rgb(68, 97, 109),
+            1px 2px 2px rgb(68, 97, 109), 1px 3px 2px rgb(68, 97, 109);
+        }
+      }
+    }
+
+    .about-text {
+      width: 800px;
+      align-self: center;
+      margin: 0;
+      top: 40em;
+
+      .about-header {
+        display: block;
+        left: -50px;
+      }
+    }
   }
 }

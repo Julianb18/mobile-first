@@ -1,11 +1,11 @@
 #skills-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   width: 100%;
 
   .skills-text {
-    padding: 0 0.5em;
+    padding: 0 1em;
     h2 {
       color: $primary-color;
       letter-spacing: 1px;
@@ -300,4 +300,7 @@
     stroke-dashoffset: calc(440 - (440 * 0) / 100);
     stroke: rgb(255, 252, 61);
   }
+}
+
+@media all and (min-width: 992px) {
 }

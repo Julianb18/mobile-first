@@ -1,9 +1,10 @@
 .digital-clock {
   display: flex;
   align-self: flex-end;
-  margin-top: 3.6em;
-  // position: absolute;
-  // top: 4rem;
+  // margin-top: 3.6em;
+  transition: all ease-in-out 0.3s;
+  position: absolute;
+  top: 3.6em;
 
   .flip {
     position: relative;
