@@ -9,6 +9,8 @@
 @import "contact";
 @import "animations";
 
+//TODO figure out how to animate on media query without saving content space
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,10 +22,28 @@ body {
   font-family: sans-serif;
 }
 
+/* Custom scroll bar */
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: rgb(41, 41, 47);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(125, 126, 126);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color;
+}
+
+/* -------------------- */
+
 .clock {
   transition: all ease-in-out 0.3s;
-  transform: translateX(120%);
   opacity: 0;
+  visibility: hidden;
 }
 
 #home-page,
@@ -36,7 +56,7 @@ body {
 
 @media all and (min-width: 992px) {
   .clock {
-    transform: translateX(0%);
     opacity: 1;
+    visibility: visible;
   }
 }
