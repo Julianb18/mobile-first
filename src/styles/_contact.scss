@@ -1,7 +1,6 @@
 #contact-page {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
@@ -12,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0em 2.4em;
+  margin-top: 3rem;
 
   h2 {
     color: $primary-color;
@@ -24,19 +24,12 @@
     text-transform: uppercase;
     position: relative;
     display: inline-block;
-    // width: 100%;
-    // color: $primary-color;
-    // font-size: 2em;
-    // text-align: center;
-    // margin-top: 60px;
     padding-bottom: 40px;
   }
 
   .contact-row {
     position: relative;
     width: 100%;
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     overflow: hidden;
 
     .field-container {
@@ -44,7 +37,6 @@
       width: 100%;
       padding: 30px 0 15px 0;
       transition: 0.5s;
-      // border: 1px solid green;
     }
 
     .inputBox {
@@ -65,19 +57,6 @@
       pointer-events: none;
     }
 
-    //   .inputBox .line::before {
-    //   content: "";
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   border-radius: 0;
-    //   border-bottom: 3px solid $primary-color;
-    //   left: 0;
-    //   bottom: 0px;
-    //   transform: translateX(-150%);
-    //   transition: transform 0.3s ease;
-    // }
-
     .inputBox .line-color {
       position: absolute;
       width: 100%;
@@ -89,22 +68,6 @@
       transform: translateX(-150%);
       transition: transform 0.3s ease;
     }
-
-    //   .inputBox .notValid {
-    //   height: 100%;
-    //   border-radius: 25px;
-    //   border-bottom: 3px solid red;
-    //   background-color: rgb(30, 30, 36);
-    //   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
-    //     inset -1px 0px 5px rgba(255, 255, 255, 0.596);
-    // }
-
-    //   .selected {
-    //   color: $primary-color;
-    // }
-    //   .selected .line {
-    //   background: $primary-color;
-    // }
 
     .inputBox input,
     .inputBox.message-field textarea {
@@ -151,12 +114,6 @@
         inset -1px -1px 5px rgba(255, 255, 255, 0.596);
     }
 
-    //   .inputBox input:focus ~ .line::before,
-    //   .inputBox input:valid ~ .line::before {
-    //   transform: translateX(0%);
-    //   border-radius: 25px;
-    // }
-
     .inputBox input:focus ~ .line .line-color,
     .inputBox input:valid ~ .line .line-color {
       transform: translateX(0%);
@@ -190,12 +147,6 @@
       box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
         inset -1px -1px 5px rgba(255, 255, 255, 0.596);
     }
-
-    // .inputBox textarea:focus ~ .line::before,
-    // .inputBox textarea:valid ~ .line::before {
-    //   transform: translateX(0%);
-    //   border-radius: 25px;
-    // }
 
     .inputBox textarea:focus ~ .line .line-color,
     .inputBox textarea:valid ~ .line .line-color {
@@ -239,7 +190,6 @@
   color: rgb(255, 58, 50);
   letter-spacing: 1px;
   display: none;
-  // text-transform: uppercase;
 }
 
 input:-webkit-autofill,

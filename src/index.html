@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio</title>
+    <title>Julian Braun</title>
   </head>
   <body>
     <div class="wrapper">
@@ -292,7 +292,7 @@
             </div>
             <p>
               I started my journey as a web developer in 2019 and every day
-              since has been an exciting (but sometimes stressful) experience.
+              since has been an exciting (but sometimes challenging) experience.
             </p>
             <p>
               I enjoy working on challenging projects with positive and
@@ -313,7 +313,7 @@
               I am a front end focused developer.
             </p>
             <p>
-              HTML, CSS, SCSS, JS and building small to medium apps with REACT.
+              Primarily I enjoy using HTML, CSS, SCSS, javaScript and REACT.
             </p>
             <p>
               I also have some experience with mongoDB, Express and Node.
@@ -347,7 +347,7 @@
 
             <div class="skill-container">
               <p>React</p>
-              <span>50%</span>
+              <span>65%</span>
               <div class="skill">
                 <div class="skill-level mobile-react"></div>
               </div>
@@ -363,7 +363,7 @@
 
             <div class="skill-container">
               <p>mongodb</p>
-              <span>30%</span>
+              <span>45%</span>
               <div class="skill">
                 <div class="skill-level mobile-mongo"></div>
               </div>
@@ -420,7 +420,7 @@
                     <circle cx="70" cy="70" r="70"></circle>
                   </svg>
                   <div class="number">
-                    <h3>50<span>%</span></h3>
+                    <h3>65<span>%</span></h3>
                   </div>
                   <h3 class="skill-lang">React</h3>
                 </div>
@@ -446,7 +446,7 @@
                     <circle cx="70" cy="70" r="70"></circle>
                   </svg>
                   <div class="number">
-                    <h3>30<span>%</span></h3>
+                    <h3>45<span>%</span></h3>
                   </div>
                   <h3 class="skill-lang">mongodb</h3>
                 </div>
@@ -463,19 +463,24 @@
           </div>
           <div class="projects-container">
             <div class="project-card">
-              <h3>Project Title</h3>
+              <h3>Products List</h3>
               <div class="project-image">
-                <img src="./images/dummy.jpg" />
+                <img src="./images/products-list.png" />
                 <div class="project-text">
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Recusandae iusto, aspernatur, harum repudiandae dolores,
-                    fuga debitis architecto.
+                    A react app that is showcasing the fundamentals of react and
+                    react router through a products list exercise.
                   </p>
                 </div>
                 <div class="project-links">
-                  <a href="#" target="_blank">View Project</a>
-                  <a href="https://github.com/Julianb18" target="_blank"
+                  <a
+                    href="https://products-lists.julianb18.vercel.app/"
+                    target="_blank"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/Julianb18/products-lists"
+                    target="_blank"
                     >Github link</a
                   >
                 </div>
@@ -525,13 +530,18 @@
         </section>
 
         <section id="contact-page">
-          <form action="/" method="GET" class="contact-wrapper">
+          <form action="POST" data-netlify="true" class="contact-wrapper">
             <h2>Contact me</h2>
 
             <div class="contact-row">
               <div class="field-container">
                 <div class="inputBox name-field">
-                  <input id="name-input" type="text" required="required" />
+                  <input
+                    id="name-input"
+                    type="text"
+                    name="name"
+                    required="required"
+                  />
                   <label class="text">Name</label>
                   <div class="line"><span class="line-color"></span></div>
                   <span class="error-message">min 3 characters</span>
@@ -540,7 +550,12 @@
 
               <div class="field-container">
                 <div class="inputBox email-field">
-                  <input id="email-input" type="text" required="required" />
+                  <input
+                    id="email-input"
+                    type="text"
+                    name="email"
+                    required="required"
+                  />
                   <label class="text">Email</label>
                   <div class="line"><span class="line-color"></span></div>
                   <span class="error-message">Please enter a valid e-mail</span>
@@ -551,7 +566,12 @@
             <div class="contact-row">
               <div class="field-container">
                 <div class="inputBox subject-field">
-                  <input id="subject-input" type="text" required="required" />
+                  <input
+                    id="subject-input"
+                    type="text"
+                    name="subject"
+                    required="required"
+                  />
                   <label class="text">Subject</label>
                   <div class="line"><span class="line-color"></span></div>
                   <span class="error-message">min 3 characters</span>
@@ -562,7 +582,7 @@
             <div class="contact-row">
               <div class="field-container">
                 <div class="inputBox message-field">
-                  <textarea required="required"></textarea>
+                  <textarea required="required" name="message"></textarea>
                   <label class="text">Your message here</label>
                   <div class="line"><span class="line-color"></span></div>
                 </div>
@@ -570,7 +590,7 @@
             </div>
 
             <div class="btn">
-              <button><span>Send</span></button>
+              <button type="submit"><span>Send</span></button>
             </div>
           </form>
         </section>

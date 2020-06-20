@@ -135,16 +135,16 @@
           background: rgb(143, 255, 38);
         }
         .mobile-react {
-          width: 50%;
-          background: rgb(255, 222, 38);
+          width: 65%;
+          background: rgb(161, 255, 38);
         }
         .mobile-node {
           width: 60%;
           background: rgb(190, 255, 38);
         }
         .mobile-mongo {
-          width: 30%;
-          background: rgb(255, 81, 38);
+          width: 45%;
+          background: rgb(255, 161, 38);
         }
       }
     }
@@ -291,16 +291,16 @@
   }
 
   .skill-cards .set2 .card:nth-child(1) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 50) / 100);
-    stroke: rgb(255, 222, 38);
+    stroke-dashoffset: calc(440 - (440 * 65) / 100);
+    stroke: rgb(161, 255, 38);
   }
   .skill-cards .set2 .card:nth-child(2) svg circle:nth-child(2) {
     stroke-dashoffset: calc(440 - (440 * 60) / 100);
-    stroke: rgb(190, 255, 38);
+    stroke: rgb(197, 255, 38);
   }
   .skill-cards .set2 .card:nth-child(3) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 30) / 100);
-    stroke: rgb(255, 81, 38);
+    stroke-dashoffset: calc(440 - (440 * 45) / 100);
+    stroke: rgb(255, 161, 38);
   }
 }
 
