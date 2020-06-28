@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 1em;
+  padding: 0 2rem;
   justify-content: space-between;
 
   .about-text {
@@ -16,9 +16,10 @@
     position: relative;
 
     .about-header {
-      display: none;
+      display: block;
       position: absolute;
       top: -4em;
+      left: 0;
 
       &:hover .first-header-line::before {
         transform: translateX(0%);
@@ -36,6 +37,7 @@
           -1px -1px 5px rgba(255, 255, 255, 0.397);
         font-weight: 500;
         text-transform: uppercase;
+        display: inline-block;
       }
 
       .first-header-line {
@@ -187,6 +189,7 @@
 
   #home-page {
     .typing-animate {
+      top: 6em;
       .myName {
         font-size: 5rem;
         text-shadow: 1px 1px 1px grey, 1px 2px 2px grey, 1px 3px 2px grey,
@@ -212,14 +215,51 @@
     }
 
     .about-text {
-      width: 800px;
-      align-self: center;
+      // position: relative;
+      max-width: 1000px;
+      padding: 3em;
       margin: 0;
-      top: 40em;
+      top: 38em;
+      margin-left: 20em;
 
       .about-header {
         display: block;
-        left: -50px;
+        left: -20em;
+        top: -9em;
+      }
+
+      .my-img-border {
+        position: absolute;
+        top: -1em;
+        left: -20em;
+        height: 15em;
+        width: 15em;
+        border: 4px solid rgb(41, 41, 47);
+        border-radius: 50%;
+        box-shadow: 0 -8px 8px rgba(255, 255, 255, 0.13),
+          inset 0 0 8px rgba(255, 255, 255, 0.13), 0 8px 20px rgba(0, 0, 0, 0.5),
+          inset 0 -8px 8px rgba(0, 0, 0, 0.3);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .my-img-container {
+          width: 98%;
+          height: 98%;
+          // background-color: olive;
+          background-image: url(../images/julian.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          border-radius: 50%;
+
+          // img {
+          //   border-radius: 50%;
+
+          // }
+        }
       }
     }
   }
