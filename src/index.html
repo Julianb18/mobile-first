@@ -8,20 +8,6 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="clock">
-        <div class="hours">
-          <div class="hrs"></div>
-        </div>
-
-        <div class="minutes">
-          <div class="mins"></div>
-        </div>
-
-        <div class="seconds">
-          <div class="secs"></div>
-        </div>
-      </div>
-
       <div class="mobile-nav">
         <a class="logo" href="#home-page">
           <img src="./images/jb.png" alt="Julian Braun Logo" />
@@ -114,7 +100,7 @@
               x="0px"
               y="0px"
               viewBox="0 0 512 512"
-              style="enable-background: new 0 0 512 512;"
+              style="enable-background: new 0 0 512 512"
               fill="rgb(34, 192, 255)"
               xml:space="preserve"
             >
@@ -163,7 +149,7 @@
               y="0px"
               viewBox="0 0 100.354 100.352"
               fill="rgb(34, 192, 255)"
-              style="enable-background: new 0 0 100.354 100.352;"
+              style="enable-background: new 0 0 100.354 100.352"
               xml:space="preserve"
             >
               <path
@@ -242,6 +228,21 @@
 
       <div class="main-content">
         <section id="home-page">
+          <!-- <div id="particles-js"> -->
+          <div class="clock">
+            <div class="hours">
+              <div class="hrs"></div>
+            </div>
+
+            <div class="minutes">
+              <div class="mins"></div>
+            </div>
+
+            <div class="seconds">
+              <div class="secs"></div>
+            </div>
+          </div>
+
           <div class="digital-clock">
             <div class="flip">
               <div class="digital front" data-number="0"></div>
@@ -278,33 +279,37 @@
             </div>
           </div>
 
-          <div class="typing-animate">
-            <h2 class="myName">Hi, I'm <span>J</span>ulian!</h2>
-            <h3 class="frontend">
-              I am a <span>F</span>rontend <span>D</span>eveloper
-            </h3>
-          </div>
-          <div class="about-text">
-            <div class="about-header">
-              <h2>About me</h2>
-              <span class="first-header-line"></span>
-              <span class="second-header-line"></span>
+          <div class="home-wrapper">
+            <div class="typing-animate">
+              <h2 class="myName">Hi, I'm <span>J</span>ulian!</h2>
+              <h3 class="frontend">
+                I am a <span>F</span>rontend <span>D</span>eveloper
+              </h3>
             </div>
-            <div class="my-img-border">
-              <div class="my-img-container">
-                <!-- <img src="./images/me.png" alt="" /> -->
+            <div class="about-text">
+              <div class="about-header">
+                <h2>About me</h2>
+                <span class="first-header-line"></span>
+                <span class="second-header-line"></span>
               </div>
+              <div class="my-img-border">
+                <div class="my-img-container">
+                  <!-- <img src="./images/me.png" alt="" /> -->
+                </div>
+              </div>
+              <p>
+                I started my journey as a web developer in 2019 and every day
+                since has been an exciting (but sometimes challenging)
+                experience.
+              </p>
+              <p>
+                I enjoy working on challenging projects with positive and
+                ambitious people. I love spending time with my wife and family,
+                watching movies/series and playing games.
+              </p>
             </div>
-            <p>
-              I started my journey as a web developer in 2019 and every day
-              since has been an exciting (but sometimes challenging) experience.
-            </p>
-            <p>
-              I enjoy working on challenging projects with positive and
-              ambitious people. I love spending time with my wife and family,
-              watching movies/series and playing games.
-            </p>
           </div>
+          <!-- </div> -->
         </section>
 
         <section id="skills-page">
@@ -314,15 +319,11 @@
               <span class="first-header-line"></span>
               <span class="second-header-line"></span>
             </div>
-            <p>
-              I am a front end focused developer.
-            </p>
+            <p>I am a front end focused developer.</p>
             <p>
               Primarily I enjoy using HTML, CSS, SCSS, javaScript and REACT.
             </p>
-            <p>
-              I also have some experience with mongoDB, Express and Node.
-            </p>
+            <p>I also have some experience with mongoDB, Express and Node.</p>
           </div>
 
           <div class="mobile-skills">
@@ -466,69 +467,99 @@
             <span class="first-header-line"></span>
             <span class="second-header-line"></span>
           </div>
+
           <div class="projects-container">
-            <div class="project-card">
-              <h3>Products List</h3>
-              <div class="project-image">
-                <img src="./images/products-list.png" />
-                <div class="project-text">
-                  <p>
-                    A react app that is showcasing the fundamentals of react and
-                    react router through a products list exercise.
-                  </p>
+            <div class="project-wrapper">
+              <div class="project-card">
+                <h3>Machine 26 Form</h3>
+                <div class="project-image">
+                  <img src="./images/m26-project.png" />
+                  <div class="project-text">
+                    <p>
+                      A 10 step form with image upload. A project given to me by
+                      Machine 26.
+                    </p>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" target="_blank">View Project</a>
+                    <a href="https://github.com/Julianb18" target="_blank"
+                      >Github link</a
+                    >
+                  </div>
                 </div>
-                <div class="project-links">
-                  <a
-                    href="https://products-lists.julianb18.vercel.app/"
-                    target="_blank"
-                    >View Project</a
-                  >
-                  <a
-                    href="https://github.com/Julianb18/products-lists"
-                    target="_blank"
-                    >Github link</a
-                  >
-                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Perspiciatis error id animi nam veniam libero exercitationem
+                  rem officiis doloribus iure accusamus cum nemo vero, earum
+                  nulla optio necessitatibus cupiditate minima.
+                </p>
               </div>
             </div>
 
-            <div class="project-card">
-              <h3>Project Title</h3>
-              <div class="project-image">
-                <img src="./images/dummy.jpg" />
-                <div class="project-text">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Recusandae iusto, aspernatur, harum repudiandae dolores,
-                    fuga debitis architecto.
-                  </p>
+            <div class="project-wrapper second-wrapper">
+              <div class="project-card p-card-mobile">
+                <h3>Project Title</h3>
+                <div class="project-image">
+                  <img src="./images/dummy.jpg" />
+                  <div class="project-text">
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Recusandae iusto, aspernatur, harum repudiandae dolores,
+                      fuga debitis architecto.
+                    </p>
+                  </div>
+                  <div class="project-links">
+                    <a href="#" target="_blank">View Project</a>
+                    <a href="https://github.com/Julianb18" target="_blank"
+                      >Github link</a
+                    >
+                  </div>
                 </div>
-                <div class="project-links">
-                  <a href="#" target="_blank">View Project</a>
-                  <a href="https://github.com/Julianb18" target="_blank"
-                    >Github link</a
-                  >
-                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Perspiciatis error id animi nam veniam libero exercitationem
+                  rem officiis doloribus iure accusamus cum nemo vero, earum
+                  nulla optio necessitatibus cupiditate minima.
+                </p>
               </div>
             </div>
 
-            <div class="project-card">
-              <h3>Project Title</h3>
-              <div class="project-image">
-                <img src="./images/dummy.jpg" />
-                <div class="project-text">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Recusandae iusto, aspernatur, harum repudiandae dolores,
-                    fuga debitis architecto.
-                  </p>
+            <div class="project-wrapper">
+              <div class="project-card">
+                <h3>Products List</h3>
+                <div class="project-image">
+                  <img src="./images/products-list.png" />
+                  <div class="project-text">
+                    <p>
+                      A react app that is showcasing the fundamentals of react
+                      and react router through a products list exercise.
+                    </p>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://products-lists.julianb18.vercel.app/"
+                      target="_blank"
+                      >View Project</a
+                    >
+                    <a
+                      href="https://github.com/Julianb18/products-lists"
+                      target="_blank"
+                      >Github link</a
+                    >
+                  </div>
                 </div>
-                <div class="project-links">
-                  <a href="#" target="_blank">View Project</a>
-                  <a href="https://github.com/Julianb18" target="_blank"
-                    >Github link</a
-                  >
-                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Perspiciatis error id animi nam veniam libero exercitationem
+                  rem officiis doloribus iure accusamus cum nemo vero, earum
+                  nulla optio necessitatibus cupiditate minima.
+                </p>
               </div>
             </div>
           </div>
@@ -657,5 +688,12 @@
         </section>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load("particles-js", "./src/particles.json", function () {
+        console.log("callback - particles.js config loaded");
+      });
+    </script>
   </body>
 </html>

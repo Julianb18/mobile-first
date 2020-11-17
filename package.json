@@ -31,7 +31,7 @@
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
-    "resolve-url-loader": "^3.1.0",
+    "resolve-url-loader": "^3.1.2",
     "sass-loader": "^7.2.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.2",
@@ -39,6 +39,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "particles.js": "^2.0.0"
   }
 }

@@ -3,17 +3,23 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
+
   justify-content: space-between;
+
+  .home-wrapper {
+    padding: 0 2em;
+  }
 
   .about-text {
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.657),
       inset -1px -1px 5px rgba(255, 255, 255, 0.397);
+    background-color: $nav-primary;
     padding: 1.5em 1em;
     border-radius: 10px;
     line-height: 1.4em;
     margin: 25em 0 0 0;
     position: relative;
+    z-index: 10;
 
     .about-header {
       display: block;
@@ -215,7 +221,7 @@
     }
 
     .about-text {
-      // position: relative;
+      // position: absolute;
       max-width: 1000px;
       padding: 3em;
       margin: 0;
@@ -232,9 +238,8 @@
         position: absolute;
         top: -1em;
         left: -20em;
-        height: 15em;
-        width: 15em;
-        border: 4px solid rgb(41, 41, 47);
+        height: 14em;
+        width: 14em;
         border-radius: 50%;
         box-shadow: 0 -8px 8px rgba(255, 255, 255, 0.13),
           inset 0 0 8px rgba(255, 255, 255, 0.13), 0 8px 20px rgba(0, 0, 0, 0.5),
@@ -247,7 +252,6 @@
         .my-img-container {
           width: 98%;
           height: 98%;
-          // background-color: olive;
           background-image: url(../images/julian.png);
           background-size: cover;
           background-repeat: no-repeat;

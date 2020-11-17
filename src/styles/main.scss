@@ -22,6 +22,11 @@ body {
   font-family: sans-serif;
 }
 
+#particles-js {
+  background-color: $secondary-color;
+  height: 100%;
+}
+
 /* Custom scroll bar */
 
 ::-webkit-scrollbar {
@@ -46,7 +51,9 @@ body {
   visibility: hidden;
 }
 
-#home-page,
+#home-page {
+  min-height: 100vh;
+}
 #skills-page,
 #projects-page,
 #contact-page {
